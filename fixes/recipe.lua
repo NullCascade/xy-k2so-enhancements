@@ -36,7 +36,7 @@ if settings.startup['xy-processing-unit-alt'].value then
         data.raw['recipe']['cerys-processing-units-from-nitric-acid'].ingredients = {
             {type = 'item', name = 'electronic-circuit', amount = 3}, 
             {type = 'item', name = 'advanced-circuit', amount = 6},
-            {type = 'fluid', name = 'nitric-acid', amount = 10},
+            {type = 'fluid', name = 'kr-nitric-acid', amount = 10},
         }
         data.raw['recipe']['cerys-processing-units-from-nitric-acid'].results = {
             {type = 'item', name = 'processing-unit', amount = 2},
