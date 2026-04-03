@@ -20,15 +20,15 @@ end
 --- Tech card replacements
 if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] then
     if settings.startup['xy-paracelsin-tech-card-endgame'].value then
-        table.insert(t['kr-singularity-lab'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-antimatter-ammo'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-antimatter-reactor'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-antimatter-reactor-equipment'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-intergalactic-transceiver'].unit.ingredients, {'galvanization-science-pack', 1})
+        util.tech_add_card('kr-singularity-lab', 'galvanization-science-pack')
+        util.tech_add_card('kr-antimatter-ammo', 'galvanization-science-pack')
+        util.tech_add_card('kr-antimatter-reactor', 'galvanization-science-pack')
+        util.tech_add_card('kr-antimatter-reactor-equipment', 'galvanization-science-pack')
+        util.tech_add_card('kr-intergalactic-transceiver', 'galvanization-science-pack')
     end
 
     if settings.startup['xy-lab-recipe-changes'].value and mods['planet-muluna'] then
-        table.insert(t['cryolab'].unit.ingredients, {'galvanization-science-pack', 1})
+        util.tech_add_card('cryolab', 'galvanization-science-pack')
     end
 end
 if settings.startup['xy-adv-chem-plant-rebalance'].value and mods['Paracelsin'] then
@@ -82,15 +82,15 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
     end
     
     if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] and not mods['outer-rim'] then
-        table.insert(t['planet-discovery-secretas'].unit.ingredients, {'galvanization-science-pack', 1})
+        util.tech_add_card('planet-discovery-secretas', 'galvanization-science-pack')
     end
 end
 --- Make K2's Adv. Tank more expensive to make you actually use the Spidertron for war purposes
 if settings.startup['xy-advanced-tank-expensive-research'].value then
     t['kr-advanced-tank'].unit.count = 2500
-    table.insert(t['kr-advanced-tank'].unit.ingredients, {'metallurgic-science-pack', 1})
-    table.insert(t['kr-advanced-tank'].unit.ingredients, {'agricultural-science-pack', 1})
-    table.insert(t['kr-advanced-tank'].unit.ingredients, {'electromagnetic-science-pack', 1})
+    util.tech_add_card('kr-advanced-tank', 'metallurgic-science-pack')
+    util.tech_add_card('kr-advanced-tank', 'agricultural-science-pack')
+    util.tech_add_card('kr-advanced-tank', 'electromagnetic-science-pack')
     add_preqs('kr-advanced-tank', {'metallurgic-science-pack','agricultural-science-pack','electromagnetic-science-pack'})
 end
 --- Wipe out early tech cards in mid-late technologies
