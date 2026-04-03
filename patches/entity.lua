@@ -67,7 +67,7 @@ if settings.startup['xy-advanced-centrifuge-rebalance'].value and mods['advanced
     -- move the tech from matter cards down to electromagnetic cards
     -- the other adv. buildings arent locked like that
     util.tech_remove_cards('k11-advanced-centrifuge', {'kr-matter-tech-card'})
-    table.insert(data.raw.technology['k11-advanced-centrifuge'].unit.ingredients, {'electromagnetic-science-pack', 1})
+    util.tech_add_card('k11-advanced-centrifuge', 'electromagnetic-science-pack')
     util.tech_add_preqs('k11-advanced-centrifuge', {'electromagnetic-science-pack'})
     -- recipe
     local ingred1 = {type = 'item', name = 'centrifuge', amount = 4}

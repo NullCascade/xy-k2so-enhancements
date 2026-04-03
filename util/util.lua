@@ -37,6 +37,23 @@ local function remove_cards(tech, cards_to_remove) -- Should be used before add_
 end
 utils.tech_remove_cards = remove_cards
 
+local function add_card(tech, card_to_add)
+    local tech_prototype = t[tech]
+    if (not tech_prototype) then
+        log(tech..' - Tech does not exist!')
+        return
+    end
+
+    for _, ingredient in ipairs(tech_prototype.unit.ingredients) do
+        if (ingredient[1] == card_to_add) then
+            return
+        end
+    end
+
+    table.insert(tech_prototype.unit.ingredients, {card_to_add, 1})
+end
+utils.tech_add_card = add_card
+
 local function order_from_index(list, prototype, lead)
     local lead = lead or 'z'
     for index,item in pairs(list) do
