@@ -92,7 +92,6 @@ if mods['science-tab'] then
         'cryogenic-science-pack',
         'kr-matter-tech-card',
         'kr-singularity-tech-card',
-        'golden-science-pack',
         'particle-physics-pack',
         'gas-manipulation-science-pack',
 
