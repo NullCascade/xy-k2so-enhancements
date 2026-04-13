@@ -8,7 +8,10 @@ if settings.startup['xy-item-weight'].value then
     -- fuel capacity is also doubled
     data.raw['item']['kr-rare-metal-ore'].weight = 2 * kg -- this was 70/rocket which is even more odd, moreso a consistency change. still useless because enriched ore is 1kg
     data.raw['item']['sand'].weight = .5 * kg
-    data.raw['item']['glass'].weight = 1 * kg
+    -- the name on this item is inconsistent
+    if data.raw['item']['glass'] then
+        data.raw['item']['glass'].weight = 1 * kg    
+    end
     data.raw['item']['steel-plate'].weight = 2 * kg
     data.raw['item']['kr-imersite-powder'].weight = .5 * kg
     data.raw['item']['kr-inserter-parts'].weight = .5 * kg

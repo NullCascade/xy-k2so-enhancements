@@ -1,28 +1,16 @@
 local util = require('util.util')
 local function apply_item_subgroup(subgroup, items, prototype)
-    for _,item in pairs(items) do
+    for _, item in pairs(items) do
         local v = data.raw[prototype][item]
-        if v then 
+        if v then
             v.subgroup = subgroup
         end
     end
 end
--- If installed, group all dedicated science manufactories into the science tab
--- also labs
-if mods['science-tab'] and settings.startup['xy-move-lab-category'].value then
-    data.raw['item-subgroup']['lab'].group = 'science'
-    data.raw['item-subgroup']['lab'].order = '00000'
-end
 
-if mods['science-tab'] then 
+if mods['science-tab'] then
     -- reset the orders as the index of this list; so order matters!
     data:extend({
-        {
-            type = 'item-subgroup',
-            group = 'science',
-            name = 'xy-research-data',
-            order = 'c1',
-        },
         {
             type = 'item-subgroup',
             group = 'science',
@@ -65,15 +53,9 @@ if mods['science-tab'] then
         'xy-electrochemical-research-data',
         'xy-sun-research-data',
         'hydraulic-research-data',
-        'xy-thermodynamic-research-data',
         'kr-cryogenic-research-data',
         'kr-matter-research-data',
-        'xy-galvanization-research-data',
-        'xy-cryochemical-research-data',
-        'xy-particle-physics-research-data',
-        'xy-insulation-research-data',
-        'xy-golden-research-data',
-        'xy-spacecraft-research-data',
+        'xy-particle-physics-research-data',        
         'xy-gas-manipulation-research-data',
         'kr-promethium-research-data',
     }
@@ -107,17 +89,18 @@ if mods['science-tab'] then
         'outer-rim-thermodynamic-science-pack',
         'cryogenic-science-pack',
         'kr-matter-tech-card',
-        'galvanization-science-pack',
-        'outer-rim-cryochemical-science-pack',
-        'outer-rim-insulation-science-pack',
         'kr-singularity-tech-card',
-        'golden-science-pack',
-        'outer-rim-spacecraft-science-pack',
         'particle-physics-pack',
         'gas-manipulation-science-pack',
-
         'promethium-science-pack', -- Always last (unless something adds post-promethium)
     }
+    -- the outer rim brings its own compat for this.
+    if not mods["outer-rim"] then
+        table.insert(order_tech_card_3, 5, 'galvanization-science-pack')
+        table.insert(order_tech_card_3, 7, 'golden-science-pack')
+        table.insert(order_research_data,16,'xy-galvanization-research-data')
+        table.insert(order_research_data,18,'xy-golden-research-data')
+    end
     local order_special_science = {
         'kr-space-research-data-advanced',
         'cerys-space-science-pack-from-methane-ice',
@@ -125,7 +108,10 @@ if mods['science-tab'] then
         'rubia-biofusion-promethium-science-pack',
     }
 
-    apply_item_subgroup('xy-research-data', order_research_data, 'item')
+    -- the science tab mod contains this by default.
+
+    apply_item_subgroup('krastorio-research-data', order_research_data, 'item')
+
     apply_item_subgroup('xy-tech-card-1', order_tech_card_1, 'tool')
     apply_item_subgroup('xy-tech-card-2', order_tech_card_2, 'tool')
     apply_item_subgroup('xy-tech-card-3', order_tech_card_3, 'tool')

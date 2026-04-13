@@ -207,17 +207,6 @@ data:extend({
     },
     {
         type = 'bool-setting',
-        name = 'xy-move-lab-category',
-        setting_type = 'startup',
-        default_value = true,
-
-        order = 'x-x-misc-b',
-
-        localised_name = {'mod-setting-name.xy-move-lab-category'},
-        localised_description = {'mod-setting-description.xy-move-lab-category'},
-    },
-    {
-        type = 'bool-setting',
         name = 'xy-advanced-centrifuge-rebalance',
         setting_type = 'startup',
         default_value = true,

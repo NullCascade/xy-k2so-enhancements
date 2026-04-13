@@ -52,14 +52,6 @@ return { ---- Please see fixes.tech_cards for how to use this file ----
         ['import_location'] = 'aquilo',
     },
     {
-        ['mod'] = 'workshop-science',
-        ['setting'] = true,
-        ['original_name'] = 'workshop-science-pack',
-        ['short_name'] = 'workshop',
-        ['import_location'] = 'nauvis',
-        ['basic_card'] = true
-    },
-    {
         ['mod'] = 'atan-nuclear-science',
         ['setting'] = true,
         ['original_name'] = 'nuclear-science-pack',
