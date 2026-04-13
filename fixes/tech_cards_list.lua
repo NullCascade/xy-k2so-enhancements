@@ -74,14 +74,6 @@ return { ---- Please see fixes.tech_cards for how to use this file ----
         ['import_location'] = 'pelagos',
     },
     {
-        ['mod'] = 'planetaris-arig',
-        ['setting'] = true,
-        ['original_name'] = 'planetaris-compression-science-pack',
-        ['short_name'] = 'compression',
-        ['tech_name'] = 'planetaris-compression-science',
-        ['import_location'] = 'arig'
-    },
-    {
         ['mod'] = 'skewer_planet_vesta',
         ['setting'] = true,
         ['original_name'] = 'gas-manipulation-science-pack',
