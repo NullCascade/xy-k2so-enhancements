@@ -58,6 +58,16 @@ if settings.startup['xy-processing-unit-alt'].value then
             {type = 'item', name = 'processing-unit', amount = 2},
         }
     end
+    if mods['apia'] then -- Update to Apia's Processing Unit recipe to bring it in line with other K2SO Processing Unit recipes
+        data.raw['recipe']['processing-unit-from-phosphoric-acid'].ingredients = {
+            {type = 'item', name = 'polysaccharides', amount = 8},
+            {type = 'item', name = 'advanced-circuit', amount = 6},
+            {type = "fluid", name = "phosphoric-acid", amount = 10}
+        }
+        data.raw['recipe']['processing-unit-from-phosphoric-acid'].results = {
+            {type = 'item', name = 'processing-unit', amount = 2},
+        }
+    end
 
     --[[data.raw['recipe']['kr-bio-processing-circuit'].ingredients = { -- Patched into basically this in the main mod now
         {type = 'item', name = 'advanced-circuit', amount = 6}, -- use more

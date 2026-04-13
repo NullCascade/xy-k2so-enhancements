@@ -14,3 +14,4 @@ require('patches.quality')
 -- updates; overrides over other mods
 
 require('updates.planetaris')
+require('updates.apia')

@@ -72,5 +72,12 @@ return { ---- Please see fixes.tech_cards for how to use this file ----
         ['short_name'] = 'gas-manipulation',
         ['tech_name'] = 's1_gas_manipulation_science_pack',
         ['import_location'] = 'vesta',
+    },
+    {
+        ['mod'] = 'apia',
+        ['setting'] = true,
+        ['original_name'] = 'apicultural-science-pack',
+        ['short_name'] = 'apicultural',
+        ['import_location'] = 'apia'
     }
 }

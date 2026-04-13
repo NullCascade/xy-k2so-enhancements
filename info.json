@@ -27,7 +27,8 @@
     "? atan-nuclear-science",
     "? pelagos",
     "? planetaris-arig",
-    "? skewer_planet_vesta"
+    "? skewer_planet_vesta",
+    "? apia"
   ],
   "space_travel_required": true,
   "description": "Laundry list of tweaks, fixes, and overall enhancements to Krastorio 2 Spaced Out for compatability with other mods, consistency changes, and balancing. Adds sprited tech cards to a lot of mods. Patches vehicles added by other mods to work with K2's equipment system. Patches can be toggled in settings."

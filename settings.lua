@@ -125,6 +125,29 @@ data:extend({
         localised_name = {'mod-setting-name.xy-secretas-polish'},
         localised_description = {'mod-setting-description.xy-secretas-polish'},
     },
+    --- Apia
+    {
+        type = 'bool-setting',
+        name = 'xy-apia-artillery-rebalance',
+        setting_type = 'startup',
+        default_value = true,
+
+        order = 't-apia-a',
+
+        localised_name = {'mod-setting-name.xy-apia-artillery-rebalance'},
+        localised_description = {'mod-setting-description.xy-apia-artillery-rebalance'},
+    },
+    {
+        type = 'bool-setting',
+        name = 'xy-apia-biosolar-rebalance',
+        setting_type = 'startup',
+        default_value = true,
+
+        order = 't-apia-b',
+
+        localised_name = {'mod-setting-name.xy-apia-biosolar-rebalance'},
+        localised_description = {'mod-setting-description.xy-apia-biosolar-rebalance'},
+    },
     --- General - Technology ---
     {
         type = 'bool-setting',

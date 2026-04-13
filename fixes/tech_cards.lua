@@ -102,3 +102,9 @@ if mods['pelagos'] then
     data.raw.item['xy-decomposition-research-data'].spoil_result = 'spoilage'
     data.raw.tool['pelagos-science-pack'].spoil_result = 'kr-blank-tech-card'
 end
+
+if mods['apia'] then
+    data.raw.item['xy-apicultural-research-data'].spoil_ticks = 54000
+    data.raw.item['xy-apicultural-research-data'].spoil_result = 'spoilage'
+    data.raw.tool['apicultural-science-pack'].spoil_result = 'kr-blank-tech-card'
+end
