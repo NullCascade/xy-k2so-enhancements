@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+Date: 04-13-2026
+  Bugfixes:
+    - Fixed doubled up Arig's compression research data.
+    - Fixed nitric acid processing unit tech on Cerys when using Null's K2SO Tweaks.
+    - Fixed load issues with Outer Rim/Science Spread.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 04-01-2026
   Bugfixes:
