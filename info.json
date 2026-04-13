@@ -1,11 +1,11 @@
 {
-  "name": "xy-k2so-enhancements",
+  "name": "xy-k2so-enhancements-nulls-fork",
   "factorio_version" : "2.0",
-  "version": "0.6.3",
-  "title": "xyrc's K2SO Enhancements",
-  "author": "xyrc",
-  "homepage": "https://github.com/xyrc1/xy-k2so-enhancements",
-  "contact": "Discord: xyrc",
+  "version": "0.7.0",
+  "title": "xyrc's K2SO Enhancements (Null's Fork)",
+  "author": "xyrc, EyeBallin, NullCascade",
+  "homepage": "https://github.com/NullCascade/xy-k2so-enhancements",
+  "contact": "Discord: NullCascade",
   "dependencies": [
     "base >= 2.0.72", 
     "Krastorio2-spaced-out >= 1.6.1",

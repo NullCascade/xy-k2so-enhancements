@@ -1,6 +1,6 @@
 if mods['apia'] then
     -- Non-optional settings
-    data.raw['ammo']['artillery-shell-with-phosphorus'].icon = '__xy-k2so-enhancements__/icons/phosphorus-artillery-shell.png' -- Standardised icon
+    data.raw['ammo']['artillery-shell-with-phosphorus'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/phosphorus-artillery-shell.png' -- Standardised icon
     data.raw['assembling-machine']['kr-greenhouse'].surface_conditions = { { property = "pressure", min = 1000, max = 2500, } } -- Allows greenhouse to be built on Apia, like Gleba
     data.raw['combat-robot']['flamethrower'].time_to_live = 120 * 60 --Flamethrower Drone - Increasing lifetime to standardise
 

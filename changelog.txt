@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 04-13-2026
+  Features:
+    - Added Apia support courtesy of EyeBallin.
+  Bugfixes:
+    - Removed existing Outer Rim compatibility layer, as official support is provided instead.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 04-13-2026
   Bugfixes:

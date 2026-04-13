@@ -13,7 +13,7 @@ local function reformat(original_name, short_name, import_location, tech_name, i
             {
                 type = 'item',
                 name = 'xy-'..research_data_name,
-                icon = '__xy-k2so-enhancements__/icons/'..research_data_name..'.png',
+                icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..research_data_name..'.png',
                 subgroup = 'science-pack',
                 order = 'zzz', -- This should be overridden by patches.category
                 stack_size = 200,
@@ -37,7 +37,7 @@ local function reformat(original_name, short_name, import_location, tech_name, i
     r.always_show_products = true
     r.show_amount_in_title = false
     r.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
-    r.icon = '__xy-k2so-enhancements__/icons/'..short_name..'-tech-card.png'
+    r.icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..short_name..'-tech-card.png'
     if basic_card then
         r.category = 'crafting'
         for _, ingredients in pairs(r.ingredients) do
@@ -65,12 +65,12 @@ local function reformat(original_name, short_name, import_location, tech_name, i
             end
         end
         research_data_recipe.main_product = research_data_recipe.name
-        research_data_recipe.icon = '__xy-k2so-enhancements__/icons/'..research_data_name..'.png'
+        research_data_recipe.icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..research_data_name..'.png'
     end
 
     -- Change research data icon and loc
     local i = data.raw.tool[original_name]
-    i.icon = '__xy-k2so-enhancements__/icons/'..short_name..'-tech-card.png'
+    i.icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..short_name..'-tech-card.png'
     i.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
 
     -- Finally, change the technology to give research data recipe + change its icons and loc
@@ -83,7 +83,7 @@ local function reformat(original_name, short_name, import_location, tech_name, i
     end
     if not ignore_tech then
         t.icons = nil
-        t.icon = '__xy-k2so-enhancements__/icons/'..short_name..'-tech-card-research.png'
+        t.icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..short_name..'-tech-card-research.png'
         t.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
     end
 end

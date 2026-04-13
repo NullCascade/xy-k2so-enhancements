@@ -52,7 +52,7 @@ if settings.startup['kr-loaders'].value then
         {
             type = 'item',
             name = 'xy-hyper-loader',
-            icon = '__xy-k2so-enhancements__/icons/hyper-loader.png',
+            icon = '__xy-k2so-enhancements-nulls-fork__/icons/hyper-loader.png',
             subgroup = 'belt',
             order = 'd[loader]-a5[xy-hyper-loader]',
             place_result = 'xy-hyper-loader',
@@ -62,7 +62,7 @@ if settings.startup['kr-loaders'].value then
         {
             type = 'loader-1x1',
             name = 'xy-hyper-loader',
-            icon = '__xy-k2so-enhancements__/icons/hyper-loader.png',
+            icon = '__xy-k2so-enhancements-nulls-fork__/icons/hyper-loader.png',
             flags = {'placeable-neutral', 'player-creation'},
             minable = {mining_time = .25, result = 'xy-hyper-loader'},
             fast_replaceable_group = 'transport_belt',
