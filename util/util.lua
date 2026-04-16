@@ -79,4 +79,32 @@ local function replace_ingredient_name(recipe, old, new) -- Just for item names,
 end
 utils.replace_ingred_name = replace_ingredient_name
 
+--- @param entity_type string
+--- @param entity_id string
+--- @param planet_id string
+function utils.relax_conditions_for_planet(entity_type, entity_id, planet_id)
+	local surface = data.raw["planet"][planet_id]
+	if (surface == nil) then
+		return
+	end
+
+	local prototype = data.raw[entity_type][entity_id]
+	if (prototype == nil) then
+		return nil
+	end
+
+	local surface_properties = surface.surface_properties or {}
+	for _, condition in ipairs(prototype.surface_conditions or {}) do
+		local surface_condition = surface_properties[condition.property]
+		if (surface_condition) then
+			if (condition.min > surface_condition) then
+				condition.min = surface_condition
+			end
+			if (condition.max < surface_condition) then
+				condition.max = surface_condition
+			end
+		end
+	end
+end
+
 return utils

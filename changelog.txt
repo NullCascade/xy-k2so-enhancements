@@ -3,6 +3,7 @@ Version: 0.7.1
 Date: 04-15-2026
   Bugfixes:
     - Fixed sound-related runtime errors with Arig.
+    - Made the Apia changes to the K2 greenhouse more compatible with other mods.
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.0
 Date: 04-13-2026
