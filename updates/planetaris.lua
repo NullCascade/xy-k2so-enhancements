@@ -1,6 +1,7 @@
 if not mods['planetaris-arig'] then return end
 local util = require('util.util')
 local loader_graphics = require('__Krastorio2-spaced-out__.prototypes.buildings.loader-graphics')
+local sounds = require("__base__.prototypes.entity.sounds")
 
 -- Patch so that turbo (green) -> hyper (white) -> superior (purple) belts
 util.tech_remove_preqs('kr-logistic-5', {'turbo-transport-belt'})
