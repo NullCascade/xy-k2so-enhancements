@@ -1,0 +1,5 @@
+{
+    "recipe": [
+        [ "xy-hyper-loader", "kr-hyper-loader" ]
+    ]
+}
