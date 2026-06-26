@@ -2,6 +2,7 @@
 Version: 0.7.3
 Date: 06-26-2026
   Changes:
+    - Marked original xyrc's mod as explicitly incompatible so people don't try to run both.
     - Removed more redundant hyper loader code.
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.2
