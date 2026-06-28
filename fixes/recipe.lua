@@ -1,12 +1,22 @@
-local function add_additional_categories(recipes, category) -- Passing nil recipes or recipes with nil or existing additiona_categories is safe
-    for _,r in pairs(recipes) do
-        if data.raw['recipe'][r] then
-            if data.raw['recipe'][r].additional_categories then
-                table.insert(data.raw['recipe'][r].additional_categories, category)
-            else
-                data.raw['recipe'][r].additional_categories = {category}
+local function add_additional_category(recipe, category)
+    local prototype = data.raw['recipe'][recipe]
+    if prototype then
+        if prototype.additional_categories then
+            for _, existing_category in ipairs(prototype.additional_categories) do
+                if (existing_category == category) then
+                    return
+                end
             end
+            table.insert(prototype.additional_categories, category)
+        else
+            prototype.additional_categories = {category}
         end
+    end
+end
+
+local function add_additional_categories(recipes, category) -- Passing nil recipes or recipes with nil or existing additiona_categories is safe
+    for _, r in pairs(recipes) do
+        add_additional_category(r, category)
     end
 end
 

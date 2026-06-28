@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+Date: 06-27-2026
+  Changes:
+    - Added more modded content support to Paracelsin's mechanical plant. Fix some typos in the existing recipe expansion.
+    - Fix possible data error when expanding the mechanical plant's functionality.
+---------------------------------------------------------------------------------------------------
 Version: 0.7.3
 Date: 06-26-2026
   Changes:
