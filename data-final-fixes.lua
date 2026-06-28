@@ -1,7 +1,6 @@
 -- less things should probably be here
 -- fixes; these shouldn't be turned off
 require('fixes.vehicle')
-require('fixes.recipe')
 
 -- patches; optional but recommended
 
