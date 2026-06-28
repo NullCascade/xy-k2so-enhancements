@@ -72,6 +72,7 @@ local function reformat(original_name, short_name, import_location, tech_name, i
     local i = data.raw.tool[original_name]
     i.icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..short_name..'-tech-card.png'
     i.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
+    i.pictures = nil;
 
     -- Finally, change the technology to give research data recipe + change its icons and loc
     local tech_name = tech_name or original_name
