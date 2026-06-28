@@ -1,3 +1,8 @@
+
+local function get_ambiguous_science(key)
+    return data.raw['item'][key] or data.raw['tool'][key]
+end
+
 local function reformat(original_name, short_name, import_location, tech_name, ignore_tech, basic_card)
     -- The actual name of the science pack, the "relevant" part of the science pack name, import location
     -- Ex: 'cryogenic-science-pack', 'cryogenic', 'aquilo', nil
@@ -31,7 +36,6 @@ local function reformat(original_name, short_name, import_location, tech_name, i
     -- If it is an advanced card, change the recipe to use research data
     -- If it is a basic card, simply add 5 blank tech cards as an ingredient
     r.energy_required = 20
-    r.additional_categories = nil
     r.surface_conditions = {}
     r.results = {{type = 'item', name = original_name, amount = 5},}
     r.always_show_products = true
@@ -39,16 +43,16 @@ local function reformat(original_name, short_name, import_location, tech_name, i
     r.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
     r.icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..short_name..'-tech-card.png'
     if basic_card then
-        r.category = 'crafting'
+        r.categories = {'crafting'}
         for _, ingredients in pairs(r.ingredients) do
 			if ingredients.type == 'fluid' then
-				r.category = 'crafting-with-fluid'
+				r.categories = {'crafting-with-fluid'}
 				break
 			end
 		end
         table.insert(r.ingredients, {type = 'item', name = 'kr-blank-tech-card', amount = 5})
     else
-        r.category = 'kr-tech-cards'
+        r.categories = {'kr-tech-cards'}
         r.ingredients = {
             {type = 'item', name = 'kr-blank-tech-card', amount = 5},
             {type = 'item', name = 'xy-'..research_data_name, amount = 5},
@@ -69,7 +73,7 @@ local function reformat(original_name, short_name, import_location, tech_name, i
     end
 
     -- Change research data icon and loc
-    local i = data.raw.tool[original_name]
+    local i = get_ambiguous_science(original_name)
     i.icon = '__xy-k2so-enhancements-nulls-fork__/icons/'..short_name..'-tech-card.png'
     i.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
     i.pictures = nil;
@@ -101,11 +105,11 @@ end
 if mods['pelagos'] then
     data.raw.item['xy-decomposition-research-data'].spoil_ticks = 81000
     data.raw.item['xy-decomposition-research-data'].spoil_result = 'spoilage'
-    data.raw.tool['pelagos-science-pack'].spoil_result = 'kr-blank-tech-card'
+    get_ambiguous_science('pelagos-science-pack').spoil_result = 'kr-blank-tech-card'
 end
 
 if mods['apia'] then
     data.raw.item['xy-apicultural-research-data'].spoil_ticks = 54000
     data.raw.item['xy-apicultural-research-data'].spoil_result = 'spoilage'
-    data.raw.tool['apicultural-science-pack'].spoil_result = 'kr-blank-tech-card'
+    get_ambiguous_science('apicultural-science-pack').spoil_result = 'kr-blank-tech-card'
 end

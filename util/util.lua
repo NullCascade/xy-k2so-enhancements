@@ -107,4 +107,13 @@ function utils.relax_conditions_for_planet(entity_type, entity_id, planet_id)
 	end
 end
 
+function utils.insert_unique(t, value)
+    for _, v in ipairs(t) do
+        if (v == value) then
+            return
+        end
+    end
+    table.insert(t, value)
+end
+
 return utils

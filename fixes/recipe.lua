@@ -1,15 +1,15 @@
 local function add_additional_category(recipe, category)
     local prototype = data.raw['recipe'][recipe]
     if prototype then
-        if prototype.additional_categories then
-            for _, existing_category in ipairs(prototype.additional_categories) do
+        if prototype.categories then
+            for _, existing_category in ipairs(prototype.categories) do
                 if (existing_category == category) then
                     return
                 end
             end
-            table.insert(prototype.additional_categories, category)
+            table.insert(prototype.categories, category)
         else
-            prototype.additional_categories = {category}
+            prototype.categories = {category}
         end
     end
 end
@@ -84,7 +84,7 @@ if settings.startup['xy-processing-unit-alt'].value then
         {type = 'item', name = 'pentapod-egg', amount = 1},
         {type = 'fluid', name = 'sulfuric-acid', amount = 10},
     }
-    data.raw['recipe']['kr-bio-processing-circuit'].category = 'organic-or-assembling']] -- changed from EM plant
+    data.raw['recipe']['kr-bio-processing-circuit'].category = {'organic-or-assembling'}]] -- changed from EM plant
 end
 
 if settings.startup['xy-lab-recipe-changes'].value then
