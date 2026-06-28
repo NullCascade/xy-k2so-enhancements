@@ -33,17 +33,6 @@ data:extend({
 
         localised_name = {'mod-setting-name.xy-corrundum-tech-card'},
     },
-    {
-        type = 'bool-setting',
-        name = 'xy-corrundum-processing-unit',
-        setting_type = 'startup',
-        default_value = true,
-        
-        order = '2-corru',
-
-        localised_name = {'mod-setting-name.xy-corrundum-processing-unit'},
-        localised_description = {'mod-setting-description.xy-corrundum-processing-unit'}
-    },
     --- Maraxsis
     {
         type = 'bool-setting',
