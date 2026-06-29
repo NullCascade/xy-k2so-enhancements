@@ -9,7 +9,7 @@ local function add_additional_category(recipe, category)
             end
             table.insert(prototype.categories, category)
         else
-            prototype.categories = {category}
+            prototype.categories = { "crafting", category }
         end
     end
 end

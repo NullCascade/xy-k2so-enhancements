@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.2
+Date: 06-29-2026
+  Changes:
+    - Fixed issue where the Paracelsin mechanics crafting expansion caused basic crafting to become unavailable.
+---------------------------------------------------------------------------------------------------
 Version: 0.8.1
 Date: 06-29-2026
   Changes:
