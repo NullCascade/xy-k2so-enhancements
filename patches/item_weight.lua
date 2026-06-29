@@ -18,6 +18,8 @@ if settings.startup['xy-item-weight'].value then
     set_item_weight('kr-rare-metal-ore', 2) -- this was 70/rocket which is even more odd, moreso a consistency change. still useless because enriched ore is 1kg
     set_item_weight('sand', .5)
     set_item_weight('glass', 1)
+    set_item_weight('kr-sand', .5)
+    set_item_weight('kr-glass', 1)
     set_item_weight('steel-plate', 2)
     set_item_weight('kr-imersite-powder', .5)
     set_item_weight('kr-inserter-parts', .5)
