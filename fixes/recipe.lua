@@ -44,7 +44,7 @@ if mods['planet-muluna'] and mods['Moshine'] then
         {type = 'item', name = 'silicon-cell', amount = 4},
         {type = 'item', name = 'kr-iron-beam', amount = 12},
         {type = 'item', name = 'aluminum-plate', amount = 15},
-        {type = 'item', name = 'glass', amount = 30},
+        {type = 'item', name = 'kr-glass', amount = 30},
     }
     data.raw['recipe']['muluna-silicon-solar-panel'].results = {
         {type = 'item', name = 'solar-panel', amount = 4},
