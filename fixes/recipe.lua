@@ -20,6 +20,21 @@ local function add_additional_categories(recipes, category) -- Passing nil recip
     end
 end
 
+local function add_ingredient_if_missing(name, ingredient_type, ingredient, amount)
+    local recipe = data.raw.recipe[name]
+    if (not recipe) then
+        return
+    end
+
+    for _, existing in ipairs(recipe.ingredients or {}) do
+        if (existing.type == ingredient_type and existing.name == ingredient) then
+            return
+        end
+    end
+
+    table.insert(recipe.ingredients, { type = ingredient_type, name = ingredient, amount = amount })
+end
+
 if mods['planet-muluna'] and mods['Moshine'] then
     -- Rework "Solar panel from silicon cell" recipe to be more effective instead of just being the same thing but with aluminum
     -- 5 silicon replaced with 1 silicon cell, steel plate replaced with aluminum electronic circuit requirement removed,
@@ -98,7 +113,7 @@ if settings.startup['xy-lab-recipe-changes'].value then
             end
         end
     else
-        table.insert(sing_lab_recipe.ingredients, {type = 'item', name = 'quantum-processor', amount = 50})
+        add_ingredient_if_missing('kr-singularity-lab', 'item', 'quantum-processor', 50)
     end
 
     if mods['Paracelsin'] and mods['planet-muluna'] then

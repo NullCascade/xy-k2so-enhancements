@@ -3,6 +3,7 @@ Version: 0.7.6
 Date: 06-29-2026
   Changes:
     - Add guards against setting item weights for items that don't exist.
+    - Change how quantum processors are added to the singularity lab so it won't double them up.
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.5
 Date: 06-27-2026
