@@ -44,7 +44,7 @@ if mods['planet-muluna'] and mods['Moshine'] then
         {type = 'item', name = 'silicon-cell', amount = 4},
         {type = 'item', name = 'kr-iron-beam', amount = 12},
         {type = 'item', name = 'aluminum-plate', amount = 15},
-        {type = 'item', name = 'glass', amount = 30},
+        {type = 'item', name = 'kr-glass', amount = 30},
     }
     data.raw['recipe']['muluna-silicon-solar-panel'].results = {
         {type = 'item', name = 'solar-panel', amount = 4},
@@ -52,11 +52,6 @@ if mods['planet-muluna'] and mods['Moshine'] then
 end
 
 if settings.startup['xy-processing-unit-alt'].value then
-    local nitric_acid = 'kr-nitric-acid'
-    if (mods["nulls-k2so-tweaks"] and data.raw['fluid']['nitric-acid']) then
-        nitric_acid = 'nitric-acid'
-    end
-
     if mods['Cerys-Moon-of-Fulgora'] then
         data.raw['recipe']['cerys-processing-units-from-nitric-acid'].energy_required = 12
         data.raw['recipe']['cerys-processing-units-from-nitric-acid'].surface_conditions = {
@@ -66,7 +61,7 @@ if settings.startup['xy-processing-unit-alt'].value then
         data.raw['recipe']['cerys-processing-units-from-nitric-acid'].ingredients = {
             {type = 'item', name = 'electronic-circuit', amount = 3}, 
             {type = 'item', name = 'advanced-circuit', amount = 6},
-            {type = 'fluid', name = nitric_acid, amount = 10},
+            {type = 'fluid', name = 'kr-nitric-acid', amount = 10},
         }
         data.raw['recipe']['cerys-processing-units-from-nitric-acid'].results = {
             {type = 'item', name = 'processing-unit', amount = 2},

@@ -7,13 +7,25 @@ Date: 06-29-2026
 Version: 0.8.1
 Date: 06-29-2026
   Changes:
-    - Add guards against setting item weights for items that don't exist.
-    - Change how quantum processors are added to the singularity lab so it won't double them up.
+    - Synced with version 0.7.6.
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.0
 Date: 06-29-2026
   Changes:
     - First port to Factorio 2.1. Most mods aren't updated, and issues may exist, but it at least loads.
+---------------------------------------------------------------------------------------------------
+Version: 0.7.7
+Date: 06-29-2026
+  Changes:
+    - Ensure that new preferred sand/glass weights are used.
+    - Ensure that Krastorio's nitric acid is used in the Cerys recipe for processing units.
+    - Ensure that Krastorio's glass is used in the recipe for solar panels from silicon cells.
+---------------------------------------------------------------------------------------------------
+Version: 0.7.6
+Date: 06-29-2026
+  Changes:
+    - Add guards against setting item weights for items that don't exist.
+    - Change how quantum processors are added to the singularity lab so it won't double them up.
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.5
 Date: 06-27-2026
