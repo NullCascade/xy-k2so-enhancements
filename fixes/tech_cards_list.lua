@@ -59,6 +59,13 @@ return { ---- Please see fixes.tech_cards for how to use this file ----
         ['import_location'] = 'nauvis'
     },
     {
+        ['mod'] = 'atan-nuclear-science-fork',
+        ['setting'] = true,
+        ['original_name'] = 'nuclear-science-pack',
+        ['short_name'] = 'nuclear',
+        ['import_location'] = 'nauvis'
+    },
+    {
         ['mod'] = 'pelagos',
         ['setting'] = true,
         ['original_name'] = 'pelagos-science-pack',
