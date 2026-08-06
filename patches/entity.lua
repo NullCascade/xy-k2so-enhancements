@@ -38,10 +38,11 @@ if settings.startup['xy-adv-chem-plant-rebalance'].value and mods['Paracelsin'] 
     ep.energy_source.emissions_per_minute.pollution = 35
     ep.energy_source.drain = '160kW'
     ep.effect_receiver.base_effect.productivity = .5
-    table.insert(ep.crafting_categories, 'kr-advanced-chemistry')
+    util.insert_unique(ep.crafting_categories, 'kr-advanced-chemistry')
+    util.insert_unique(ep.crafting_categories, 'organic') -- this is fine this biolab is way too annoying to use outside gleba
+    util.insert_unique(ep.crafting_categories, 'chemistry')
+    util.insert_unique(ep.crafting_categories, 'kr-fluid-filtration')
     --table.insert(ep.crafting_categories, 'chemistry-or-cryogenics') -- otherwise cryo plant is useless
-    table.insert(ep.crafting_categories, 'organic-or-chemistry') -- this is fine this biolab is way too annoying to use outside gleba
-    table.insert(ep.crafting_categories, 'kr-fluid-filtration')
 
     data.raw.recipe['electrochemical-plant'].ingredients = {
         {type = 'item', name = 'copper-cable', amount = 25},

@@ -2,7 +2,7 @@ local util = require('util.util')
 local function apply_item_subgroup(subgroup, items, prototype)
     for _, item in pairs(items) do
         local v = data.raw[prototype][item]
-        if v then
+        if v and v.subgroup ~= subgroup then
             v.subgroup = subgroup
         end
     end
@@ -117,12 +117,12 @@ if mods['science-tab'] then
 
     apply_item_subgroup('krastorio-research-data', order_research_data, 'item')
 
-    apply_item_subgroup('xy-tech-card-1', order_tech_card_1, 'tool')
-    apply_item_subgroup('xy-tech-card-2', order_tech_card_2, 'tool')
-    apply_item_subgroup('xy-tech-card-3', order_tech_card_3, 'tool')
+    apply_item_subgroup('xy-tech-card-1', order_tech_card_1, 'item')
+    apply_item_subgroup('xy-tech-card-2', order_tech_card_2, 'item')
+    apply_item_subgroup('xy-tech-card-3', order_tech_card_3, 'item')
     apply_item_subgroup('xy-special-science', order_special_science, 'recipe')
     util.order_from_index(order_research_data, 'item')
-    util.order_from_index(order_tech_card_1, 'tool')
-    util.order_from_index(order_tech_card_2, 'tool')
-    util.order_from_index(order_tech_card_3, 'tool')
+    util.order_from_index(order_tech_card_1, 'item')
+    util.order_from_index(order_tech_card_2, 'item')
+    util.order_from_index(order_tech_card_3, 'item')
 end

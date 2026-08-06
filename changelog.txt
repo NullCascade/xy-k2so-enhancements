@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.4
+Date: 08-05-2026
+  Changes:
+    - Fix subgroup assignments error with latest version of Factorio 2.1/Science Group mod.
+---------------------------------------------------------------------------------------------------
+Version: 0.8.3
+Date: 06-29-2026
+  Changes:
+    - Synced with version 0.7.7.
+---------------------------------------------------------------------------------------------------
+Version: 0.8.2
+Date: 06-29-2026
+  Changes:
+    - Fixed issue where the Paracelsin mechanics crafting expansion caused basic crafting to become unavailable.
+---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: 06-29-2026
+  Changes:
+    - Synced with version 0.7.6.
+---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+Date: 06-29-2026
+  Changes:
+    - First port to Factorio 2.1. Most mods aren't updated, and issues may exist, but it at least loads.
+---------------------------------------------------------------------------------------------------
 Version: 0.7.7
 Date: 06-29-2026
   Changes:
