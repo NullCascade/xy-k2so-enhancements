@@ -109,3 +109,17 @@ if mods['apia'] then
     data.raw.item['xy-apicultural-research-data'].spoil_result = 'spoilage'
     data.raw.tool['apicultural-science-pack'].spoil_result = 'kr-blank-tech-card'
 end
+
+if mods['Muria'] then
+    data.raw.recipe['muriatic-science-pack-activation'].localised_name = {'recipe-name.xy-muriatic-tech-card-activation'}
+    data.raw.recipe['muriatic-science-pack-activation'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/muriatic-tech-card-activation.png'
+    data.raw.item['inert-muriatic-science-pack'].subgroup = 'science-pack'
+    data.raw.item['muriatic-science-pack'].spoil_result = 'corroded-flask'
+    data.raw.item['muriatic-science-pack'].localised_name = { 'item-name.xy-muriatic-tech-card' }
+    data.raw.item['muriatic-science-pack'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/muriatic-tech-card.png'
+    data.raw.item['corroded-flask'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/muria-corroded-card.png'
+    data.raw.item['corroded-flask'].localised_name = { 'item-name.xy-muria-corroded-card' }
+    data.raw.recipe['corroded-flask-recovery'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/muria-corroded-card-recovery.png'
+    data.raw.recipe['corroded-flask-recovery'].localised_name = { 'recipe-name.xy-muria-corroded-card-recovery' }
+    data.raw.technology['muriatic-science-pack'].localised_name = { 'research-name.xy-research-muriatic-tech-card' }
+end
