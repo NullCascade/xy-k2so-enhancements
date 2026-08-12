@@ -83,9 +83,9 @@ return { ---- Please see fixes.tech_cards for how to use this file ----
     {
         ['mod'] = 'Muria',
         ['setting'] = true,
-        ['original_name'] = 'inert-muriatic-science-pack',
-        ['short_name'] = 'inert-muriatic',
+        ['original_name'] = 'inert-acidworking-science-pack',
+        ['short_name'] = 'inert-acidworking',
         ['import_location'] = 'muria',
-        ['tech_name'] = 'muriatic-science-pack'
+        ['tech_name'] = 'acidworking-science-pack'
     }
 }
