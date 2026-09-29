@@ -72,7 +72,7 @@ if settings.startup['xy-advanced-centrifuge-rebalance'].value and mods['advanced
     util.tech_add_preqs('k11-advanced-centrifuge', {'electromagnetic-science-pack'})
     -- recipe
     local ingred1 = {type = 'item', name = 'centrifuge', amount = 4}
-    if mods['atan-nuclear-science'] then
+    if mods['atan-nuclear-science'] or mods['atan-nuclear-science-fork'] then
         ingred1 = {type = 'item', name = 'atan-atom-forge', amount = 2}
         util.tech_add_preqs('k11-advanced-centrifuge', {'atan-atom-forge'})
         util.tech_remove_preqs('k11-advanced-centrifuge', {'nuclear-science-pack'}) -- this is a sub prereq already
