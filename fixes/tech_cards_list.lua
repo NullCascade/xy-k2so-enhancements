@@ -79,5 +79,13 @@ return { ---- Please see fixes.tech_cards for how to use this file ----
         ['original_name'] = 'apicultural-science-pack',
         ['short_name'] = 'apicultural',
         ['import_location'] = 'apia'
+    },
+    {
+        ['mod'] = 'Muria',
+        ['setting'] = true,
+        ['original_name'] = 'inert-acidworking-science-pack',
+        ['short_name'] = 'inert-acidworking',
+        ['import_location'] = 'muria',
+        ['tech_name'] = 'acidworking-science-pack'
     }
 }

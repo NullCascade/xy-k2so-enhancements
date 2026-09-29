@@ -113,3 +113,17 @@ if mods['apia'] then
     data.raw.item['xy-apicultural-research-data'].spoil_result = 'spoilage'
     get_ambiguous_science('apicultural-science-pack').spoil_result = 'kr-blank-tech-card'
 end
+
+if mods['Muria'] then
+    data.raw.recipe['acidworking-science-pack-activation'].localised_name = {'recipe-name.xy-acidworking-tech-card-activation'}
+    data.raw.recipe['acidworking-science-pack-activation'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/acidworking-tech-card-activation.png'
+    data.raw.item['inert-acidworking-science-pack'].subgroup = 'science-pack'
+    get_ambiguous_science('acidworking-science-pack').spoil_result = 'corroded-flask'
+    get_ambiguous_science('acidworking-science-pack').localised_name = { 'item-name.xy-acidworking-tech-card' }
+    get_ambiguous_science('acidworking-science-pack').icon = '__xy-k2so-enhancements-nulls-fork__/icons/acidworking-tech-card.png'
+    data.raw.item['corroded-flask'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/acidworking-corroded-card.png'
+    data.raw.item['corroded-flask'].localised_name = { 'item-name.xy-acidworking-corroded-card' }
+    data.raw.recipe['corroded-flask-recovery'].icon = '__xy-k2so-enhancements-nulls-fork__/icons/acidworking-corroded-card-recovery.png'
+    data.raw.recipe['corroded-flask-recovery'].localised_name = { 'recipe-name.xy-acidworking-corroded-card-recovery' }
+    data.raw.technology['acidworking-science-pack'].localised_name = { 'research-name.xy-research-acidworking-tech-card' }
+end
