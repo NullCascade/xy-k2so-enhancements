@@ -63,6 +63,9 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
     end
 
     remove_preqs('golden-science-pack', {'planet-discovery-secretas'})
+    -- golden-science-pack is a 'craft gold plates' trigger: keep it behind steam-recycler, which unlocks the gold plate recipes,
+    -- or the tree offers it from the start
+    add_preqs('golden-science-pack', {'steam-recycler'})
 
     ::nuclear_winter_skip::
     --- Other secretas patches
